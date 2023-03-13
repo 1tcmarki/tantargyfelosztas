@@ -28,3 +28,31 @@ Hány bejegyzés található az állományban? Az eredményt írassa ki a képer
 print("2. feladat")
 print(f"A fájlban {len(beosztasok)} bejegyzés van.")
 
+"""
+3. feladat
+Mennyi a heti osszoraszam az iskolaban? Az eredmenyt irassa ki a kepernyore!
+"""
+print("3. feladat")
+
+
+def osszegezes(bok):
+    osszeg=0
+    for elem in bok:
+        osszeg+=elem["oraszam"]
+    return osszeg
+
+print(f"Az iskolában a heti összóraszám: {osszegezes(beosztasok)}")
+
+"""
+4. feladat
+Kérje be a felhasználótól egy tanár nevét, és írassa ki a képernyőre, hogy hetente hány
+órában tanít!
+"""
+be_tanarnev=input("Egy tanar neve= ") or "Albatrosz Aladin"
+def tanar_oraszamanak_osszegzese(bok,be_nev):
+    osszeg=0
+    for elem in bok:
+        if be_nev==elem["tanar"]:
+            osszeg+=elem["oraszam"]
+    return osszeg
+print(f"A tanar heti oraszama: {tanar_oraszamanak_osszegzese(beosztasok,be_tanarnev)}")
