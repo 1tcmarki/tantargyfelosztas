@@ -106,3 +106,9 @@ else:
 # ki ezt az adatot a képernyőre!
 
 print("7.feladat")
+tanarok=[]
+for beosztas in beosztasok:
+    if beosztas["tanar"] not in tanarok:
+        tanarok.append(beosztas["tanar"])
+        
+print(f"Az iskolaban {len(tanarok)} tanar tanit.")
